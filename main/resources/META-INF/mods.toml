@@ -4,12 +4,12 @@ license="All rights reserved"
  
 [[mods]]
 modId="battlegear"
-version="v0.0.1"
+version="0.0.1 Pre-Alpha"
 displayName="Mine & Blade: Battlegear III"
 logoFile="battlegear.png"
-credits="nerd-boy, amedwards, GotoLink, rainbowdestiny"
-authors="rainbowdestiny"
+credits="Thank you to nerd-boy, amedwards, and GotoLink for the original mod(s)!"
+authors="rainbowdestiny, Bug1312"
 description='''
-A remake of the remake of Minecraft's original shield and war weapons mod!
+A remake of the remake of Minecraft's coolest shield and war weapons mod!
 ''' 
  

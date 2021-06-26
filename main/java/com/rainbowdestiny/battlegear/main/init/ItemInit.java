@@ -16,11 +16,11 @@ public class ItemInit {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Battlegear.MOD_ID);
 	
 	//War Axe
-	public static final RegistryObject<Item> IRON_WARAXE = ITEMS.register("iron_waraxe", () -> new WarAxeItem(ItemTier.IRON, 5, 4, new Item.Properties().tab(ItemGroup.TAB_COMBAT), "A powerful weapon", 0));
+	public static final RegistryObject<Item> IRON_WAR_AXE = ITEMS.register("iron_war_axe", () -> new WarAxeItem(ItemTier.IRON, 5, 4, new Item.Properties().tab(ItemGroup.TAB_COMBAT), "A powerful weapon", 0));
 
 	//Shields
 	public static final RegistryObject<Item> IRON_SHIELD = ITEMS.register("iron_shield", () -> new NewShieldItem(ItemGroup.TAB_COMBAT))));
 	
-	public static final RegistryObject<Item> DIAMOND_SHIELD = ITEMS.register("diamond_shield", () -> new NewShieldItem(ItemGroup.TAB_COMBAT))));
+	//public static final RegistryObject<Item> DIAMOND_SHIELD = ITEMS.register("diamond_shield", () -> new NewShieldItem(ItemGroup.TAB_COMBAT))));
 
 }
