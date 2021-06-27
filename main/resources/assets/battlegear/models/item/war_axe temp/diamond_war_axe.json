@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "battlegear:items/diamond_war_axe"
+  }
+}

@@ -2,7 +2,12 @@
 
 	"item.battlegear.hereldry": "Hereldry",
 
+	"item.battlegear.wood_war_axe": "Wooden War Axe",
+	"item.battlegear.stone_war_axe": "Stone War Axe",
 	"item.battlegear.iron_war_axe": "Iron War Axe",
+	"item.battlegear.gold_war_axe": "Golden War Axe",
+	"item.battlegear.diamond_war_axe": "Diamond War Axe",
+	"item.battlegear.netherite_war_axe": "Netherite War Axe",
 	
 	"item.battlegear.iron_shield": "Iron Shield",
 	
