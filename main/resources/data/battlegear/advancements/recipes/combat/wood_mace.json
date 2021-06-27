@@ -1,0 +1,30 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "battlegear:wood_mace"
+        ]
+    },
+    "criteria": {
+        "has_wood": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [{
+                    "tag": "minecraft:planks"
+                }]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "battlegear:wood_mace"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_wood",
+            "has_the_recipe"
+        ]
+    ]
+}

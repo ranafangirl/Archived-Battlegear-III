@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " x",
+        "/ "
+    ],
+    "key": {
+        "x": {
+            "item": "forge:gems/diamond"
+        },
+        "/": {
+            "item": "battlegear:wood_spear"
+        }
+    },
+    "result":
+    {
+        "item": "battlegear:diamond_spear",
+        "count": 1
+    }
+}

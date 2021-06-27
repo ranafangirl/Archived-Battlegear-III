@@ -1,0 +1,30 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "battlegear:gold_mace"
+        ]
+    },
+    "criteria": {
+        "has_gold_ingot": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [{
+                    "tag": "forge:ingots/gold"
+                }]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "battlegear:gold_mace"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_gold_ingot",
+            "has_the_recipe"
+        ]
+    ]
+}

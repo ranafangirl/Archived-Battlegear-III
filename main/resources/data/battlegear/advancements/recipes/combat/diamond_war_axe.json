@@ -1,0 +1,30 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "battlegear:diamond_war_axe"
+        ]
+    },
+    "criteria": {
+        "has_diamond": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [{
+                    "tag": "forge:gems/diamond"
+                }]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "battlegear:diamond_war_axe"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_diamond",
+            "has_the_recipe"
+        ]
+    ]
+}

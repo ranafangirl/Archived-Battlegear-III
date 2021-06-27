@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " xx",
+        " xx",
+        "/  "
+    ],
+    "key": {
+        "x": {
+            "tag": "forge:ingots/gold"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result":
+    {
+        "item": "battlegear:gold_mace",
+        "count": 1
+    }
+}

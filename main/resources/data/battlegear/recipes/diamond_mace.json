@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " xx",
+        " xx",
+        "/  "
+    ],
+    "key": {
+        "x": {
+            "item": "forge:gems/diamond"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result":
+    {
+        "item": "battlegear:diamond_mace",
+        "count": 1
+    }
+}

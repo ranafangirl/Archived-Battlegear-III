@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " xx",
+        " xx",
+        "/  "
+    ],
+    "key": {
+        "x": {
+            "tag": "minecraft:planks"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result":
+    {
+        "item": "battlegear:wood_mace",
+        "count": 1
+    }
+}

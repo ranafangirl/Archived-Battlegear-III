@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "battlegear:diamond_dagger"
+  },
+  "addition": {
+    "item": "forge:ingots/netherite"
+  },
+  "result": {
+    "item": "battlegear:netherite_dagger"
+  }
+}

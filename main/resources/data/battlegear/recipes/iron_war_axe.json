@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "x x",
+        "x/x",
+        " / "
+    ],
+    "key": {
+        "x": {
+            "tag": "forge:ingots/iron"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result":
+    {
+        "item": "battlegear:iron_war_axe",
+        "count": 1
+    }
+}
