@@ -1,6 +1,11 @@
 {
 
+	"item.battlegear.hereldry": "Hereldry",
+
 	"item.battlegear.iron_war_axe": "Iron War Axe",
 	
-	"item.battlegear.iron_shield": "Iron Shield"
+	"item.battlegear.iron_shield": "Iron Shield",
+	
+	"itemGroup.battlegear": "M&B: Battlegear III"
+	
 }
