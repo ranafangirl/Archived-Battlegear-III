@@ -23,8 +23,8 @@ public class ItemInit {
 	//War Axe
 	public static final RegistryObject<Item> WOOD_WAR_AXE = ITEMS.register("wood_war_axe", () -> new WarAxeItem(ItemTier.WOOD, 3, 4, new Item.Properties().tab(Battlegear.BATTLEGEAR_GROUP), "A powerful weapon", 0));
 	public static final RegistryObject<Item> STONE_WAR_AXE = ITEMS.register("stone_war_axe", () -> new WarAxeItem(ItemTier.STONE, 4, 4, new Item.Properties().tab(Battlegear.BATTLEGEAR_GROUP), "A powerful weapon", 0));
-	public static final RegistryObject<Item> IRON_WAR_AXE = ITEMS.register("iron_war_axe", () -> new WarAxeItem(ItemTier.IRON, 5, 4, new Item.Properties().tab(Battlegear.BATTLEGEAR_GROUP), "A powerful weapon", 0));
 	public static final RegistryObject<Item> GOLD_WAR_AXE = ITEMS.register("gold_war_axe", () -> new WarAxeItem(ItemTier.GOLD, 3, 4, new Item.Properties().tab(Battlegear.BATTLEGEAR_GROUP), "A powerful weapon", 0));
+	public static final RegistryObject<Item> IRON_WAR_AXE = ITEMS.register("iron_war_axe", () -> new WarAxeItem(ItemTier.IRON, 5, 4, new Item.Properties().tab(Battlegear.BATTLEGEAR_GROUP), "A powerful weapon", 0));
 	public static final RegistryObject<Item> DIAMOND_WAR_AXE = ITEMS.register("diamond_war_axe", () -> new WarAxeItem(ItemTier.DIAMOND, 6, 4, new Item.Properties().tab(Battlegear.BATTLEGEAR_GROUP), "A powerful weapon", 0));
 	public static final RegistryObject<Item> NETHERITE_WAR_AXE = ITEMS.register("netherite_war_axe", () -> new WarAxeItem(ItemTier.NETHERITE, 7, 4, new Item.Properties().tab(Battlegear.BATTLEGEAR_GROUP), "A powerful weapon", 0));
 
