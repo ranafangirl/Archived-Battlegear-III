@@ -79,8 +79,8 @@ public class ShieldType {
     }
 
     public ShieldType setRepair(CompoundNBT compound){
-        if(compound.getKey("Repair", Constants.NBT.TAG_COMPOUND)){
-            setRepair(new ItemStack(compound.getCompoundTag("Repair")), IDSensible.INSTANCE);
+        if(compound.get("Repair", Constants.NBT.TAG_COMPOUND)){
+            setRepair(new ItemStack(compound.getCompound("Repair")), IDSensible.INSTANCE);
         }
         return this;
     }
