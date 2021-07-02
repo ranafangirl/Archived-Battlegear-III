@@ -19,27 +19,34 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class NewShieldItem extends Item implements IShield, IDyable, IEnchantable, ISheathed, IArrowCatcher, IArrowDisplay{
 
-    public NewShieldItem enumShield;
+    public ShieldType enumShield;
 
     public NewShieldItem(ShieldType enumShield) {
-        super();
+        super(null);
 
         this.enumShield = enumShield;
 
-        this.setUnlocalizedName("battlegear:shield."+enumShield.getName());
+        this.setUnlocalizedName("battlegear:shield.");
         this.setRegistryName("battlegear:shield."+enumShield.getName());
         this.setMaxDamage(enumShield.getMaxDamage());
         this.setMaxStackSize(1);
         this.setHasSubtypes(false);
         GameRegistry.register(this);
     }
-	
-	
-	
-	
-	
-	
-    String description;
+
+    private void setUnlocalizedName(String string) {
+		
+	}
+
+	private void setMaxStackSize(int i) {
+    	
+	}
+
+	private void setHasSubtypes(boolean b) {	
+		
+	}
+
+	String description;
 
     public NewShieldItem(ItemGroup tab) {
         super(new Item.Properties().tab(tab));
@@ -47,109 +54,91 @@ public class NewShieldItem extends Item implements IShield, IDyable, IEnchantabl
 
 	@Override
 	public void setArrowCount(ItemStack stack, int count) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public int getArrowCount(ItemStack stack) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public boolean catchArrow(ItemStack shield, PlayerEntity player, ThrowableEntity projectile) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean sheatheOnBack(ItemStack item) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean isEnchantable(Enchantment baseEnchantment, ItemStack stack) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean hasColor(ItemStack par1ItemStack) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public int getColor(ItemStack par1ItemStack) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public void setColor(ItemStack dyable, int rgb) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void removeColor(ItemStack par1ItemStack) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public int getDefaultColor(ItemStack par1ItemStack) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public float getDecayRate(ItemStack shield) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public float getRecoveryRate(ItemStack shield) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public boolean canBlock(ItemStack shield, DamageSource source) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public float getDamageDecayRate(ItemStack shield, float amount) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public float getBlockAngle(ItemStack shield) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int getBashTimer(ItemStack shield) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public void blockAnimation(PlayerEntity player, float amount) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public float getDamageReduction(ItemStack shield, DamageSource source) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
     
