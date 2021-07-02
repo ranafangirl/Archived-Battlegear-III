@@ -2,7 +2,7 @@
 	"credit": "Battlegear III",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "battlegear:items/iron_shield"
+		"0": "battlegear:item/iron_shield"
 	},
 	"elements": [
 		{

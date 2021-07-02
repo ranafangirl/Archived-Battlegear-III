@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "battlegear:items/iron_mace"
+    "layer0": "battlegear:item/iron_mace"
   }
 }

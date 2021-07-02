@@ -1,0 +1,6 @@
+{
+  "parent": "battlegear:item/spear",
+  "textures": {
+    "layer0": "battlegear:item/iron_spear"
+  }
+}

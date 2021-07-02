@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "battlegear:items/netherite_war_axe"
+    "layer0": "battlegear:item/netherite_war_axe"
   }
 }

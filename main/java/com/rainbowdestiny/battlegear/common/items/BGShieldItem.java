@@ -17,11 +17,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class NewShieldItem extends Item implements IShield, IDyable, IEnchantable, ISheathed, IArrowCatcher, IArrowDisplay{
+public class BGShieldItem extends Item implements IShield, IDyable, IEnchantable, ISheathed, IArrowCatcher, IArrowDisplay{
 
     public ShieldType enumShield;
 
-    public NewShieldItem(ShieldType enumShield) {
+    public BGShieldItem(ShieldType enumShield) {
         super(null);
 
         this.enumShield = enumShield;
@@ -48,7 +48,7 @@ public class NewShieldItem extends Item implements IShield, IDyable, IEnchantabl
 
 	String description;
 
-    public NewShieldItem(ItemGroup tab) {
+    public BGShieldItem(ItemGroup tab) {
         super(new Item.Properties().tab(tab));
 	}
 

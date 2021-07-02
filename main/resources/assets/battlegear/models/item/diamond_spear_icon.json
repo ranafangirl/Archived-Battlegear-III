@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "battlegear:item/wood_war_axe"
+    "layer0": "battlegear:item/diamond_spear_icon"
   }
 }

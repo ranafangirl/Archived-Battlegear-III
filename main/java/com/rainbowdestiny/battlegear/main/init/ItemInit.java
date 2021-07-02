@@ -1,6 +1,7 @@
 package com.rainbowdestiny.battlegear.main.init;
 
 import com.rainbowdestiny.battlegear.Battlegear;
+import com.rainbowdestiny.battlegear.common.items.SpearItem;
 import com.rainbowdestiny.battlegear.common.items.WarAxeItem;
 
 import net.minecraft.item.Item;
@@ -17,8 +18,10 @@ public class ItemInit {
 	public static final RegistryObject<Item> HERELDRY = ITEMS.register("hereldry", () -> new Item (new Item.Properties().tab(Battlegear.BATTLEGEAR_GROUP)));
 	
 	//Clubs & Maces
-	
 	//public static final RegistryObject<Item> IRON_MACE = ITEMS.register("iron_mace", () -> new MaceItem(ItemTier.IRON, 5, 4, new Item.Properties().tab(Battlegear.BATTLEGEAR_GROUP), "Test 1", 0));
+	
+	//Spears
+	public static final RegistryObject<Item> WOOD_SPEAR = ITEMS.register("wood_spear", () -> new SpearItem(ItemTier.WOOD, 2, 4, new Item.Properties().tab(Battlegear.BATTLEGEAR_GROUP)));
 	
 	//War Axe
 	public static final RegistryObject<Item> WOOD_WAR_AXE = ITEMS.register("wood_war_axe", () -> new WarAxeItem(ItemTier.WOOD, 3, 4, new Item.Properties().tab(Battlegear.BATTLEGEAR_GROUP), "A powerful weapon", 0));
@@ -29,7 +32,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> NETHERITE_WAR_AXE = ITEMS.register("netherite_war_axe", () -> new WarAxeItem(ItemTier.NETHERITE, 7, 4, new Item.Properties().tab(Battlegear.BATTLEGEAR_GROUP), "A powerful weapon", 0));
 
 	//Shields
-	//public static final RegistryObject<Item> IRON_SHIELD = ITEMS.register("iron_shield", () -> new NewShieldItem(ItemGroup.TAB_COMBAT))));
-	//public static final RegistryObject<Item> DIAMOND_SHIELD = ITEMS.register("diamond_shield", () -> new NewShieldItem(ItemGroup.TAB_COMBAT))));
+	//public static final RegistryObject<Item> IRON_SHIELD = ITEMS.register("iron_shield", () -> new BGShieldItem(ItemGroup.TAB_COMBAT))));
+	//public static final RegistryObject<Item> DIAMOND_SHIELD = ITEMS.register("diamond_shield", () -> new BGShieldItem(ItemGroup.TAB_COMBAT))));
 
 }

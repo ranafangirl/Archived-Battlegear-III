@@ -11,12 +11,12 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
-public class ItemMace extends SwordItem {
+public class MaceItem extends SwordItem {
 
     private float stunChance;
 	private int baseDamage;
 
-	public ItemMace(ToolType material, String name, float stunChance) {
+	public MaceItem(ToolType material, String name, float stunChance) {
 		super(SwordItem,name);
 		//set the base damage to that of lower than usual (balance)
 		this.baseDamage -= 1;
