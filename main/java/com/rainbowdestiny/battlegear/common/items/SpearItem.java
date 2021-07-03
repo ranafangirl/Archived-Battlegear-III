@@ -41,18 +41,11 @@ public class SpearItem extends SwordItem {
 	private static LazyValue<Multimap<Attribute, AttributeModifier>> rangeModifier = new LazyValue<>(
 			() -> ImmutableMultimap.of(ForgeMod.REACH_DISTANCE.get(), RangeAttributeModifier));
 
+	@SuppressWarnings("resource")
 	private static boolean isPlayerHolding() {
 		if (Minecraft.getInstance().getCameraEntity() == null)
 			return false;
-
-		boolean isHolding = false;
-
-		for (ItemStack item : Minecraft.getInstance().getCameraEntity().getHandSlots()) {
-			if (item.getItem() instanceof SpearItem) {
-				isHolding = true;
-			}
-		}
-		return isHolding;
+		return Minecraft.getInstance().player.getMainHandItem().getItem() instanceof SpearItem;
 	}
 
 	// Contructors
