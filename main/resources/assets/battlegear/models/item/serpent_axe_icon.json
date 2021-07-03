@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "battlegear:item/serpent_axe_icon"
+  }
+}

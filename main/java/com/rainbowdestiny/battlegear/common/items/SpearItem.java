@@ -13,6 +13,8 @@ import net.minecraft.entity.projectile.ProjectileHelper;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.SwordItem;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.potion.Effect;
+import net.minecraft.potion.EffectInstance;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -33,15 +35,10 @@ import net.minecraftforge.common.ForgeMod;
 public class SpearItem extends SwordItem {
 
 	private static int addedRange = 5;
-
-	public SpearItem(IItemTier tier, int attackDamage, float attackSpeed, Properties properties) {
-		super(tier, attackDamage, attackSpeed, properties);
-	}
-
+	private Effect effect = null;
 	public static final AttributeModifier RangeAttributeModifier = new AttributeModifier(UUID.randomUUID(),
 			"Range modifier", addedRange, AttributeModifier.Operation.ADDITION);
-
-	static LazyValue<Multimap<Attribute, AttributeModifier>> rangeModifier = new LazyValue<>(
+	private static LazyValue<Multimap<Attribute, AttributeModifier>> rangeModifier = new LazyValue<>(
 			() -> ImmutableMultimap.of(ForgeMod.REACH_DISTANCE.get(), RangeAttributeModifier));
 
 	private static boolean isPlayerHolding() {
@@ -58,7 +55,24 @@ public class SpearItem extends SwordItem {
 		return isHolding;
 	}
 
-//	@SubscribeEvent
+	// Contructors
+	public SpearItem(IItemTier tier, int attackDamage, float attackSpeed, Properties properties) {
+		super(tier, attackDamage, attackSpeed, properties);
+	}
+
+	public SpearItem(IItemTier tier, int attackDamage, float attackSpeed, Properties properties, Effect effect) {
+		super(tier, attackDamage, attackSpeed, properties);
+		this.setEffect(effect);
+	}
+
+	@Override
+	public boolean hurtEnemy(ItemStack item, LivingEntity entity, LivingEntity player) {
+		if (this.getEffect() != null)
+			entity.addEffect(new EffectInstance(this.getEffect(), 200, 0, true, true));
+		return super.hurtEnemy(item, entity, player);
+	}
+
+	@SubscribeEvent
 	public static void holdingSpear(LivingUpdateEvent event) {
 		if (!(event.getEntity() instanceof PlayerEntity))
 			return;
@@ -81,14 +95,14 @@ public class SpearItem extends SwordItem {
 	public static void dontMissEntitiesWhenYouHaveHighReachDistance(ClickInputEvent event) {
 		Minecraft mc = Minecraft.getInstance();
 		Entity entity = mc.getCameraEntity();
-		float p_78473_1_ = mc.gameMode.getPickRange() + addedRange;
+		float f0 = 1.0f;
 
 		if (entity != null && SpearItem.isPlayerHolding()) {
 			if (mc.level != null) {
 				mc.crosshairPickEntity = null;
 				double d0 = (double) mc.gameMode.getPickRange() + addedRange;
-				mc.hitResult = entity.pick(d0, p_78473_1_, false);
-				Vector3d vector3d = entity.getEyePosition(p_78473_1_);
+				mc.hitResult = entity.pick(d0, f0, false);
+				Vector3d vector3d = entity.getEyePosition(f0);
 				double d1 = d0;
 				if (mc.gameMode.hasFarPickRange()) {
 					d1 += 0.5f;
@@ -121,4 +135,11 @@ public class SpearItem extends SwordItem {
 		}
 	}
 
+	public Effect getEffect() {
+		return effect;
+	}
+
+	public void setEffect(Effect effect) {
+		this.effect = effect;
+	}
 }
