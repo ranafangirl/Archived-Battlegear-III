@@ -32,7 +32,7 @@ import net.minecraftforge.common.ForgeMod;
 @EventBusSubscriber
 public class SpearItem extends SwordItem {
 
-	private static int addedRange = 15;
+	private static int addedRange = 5;
 
 	public SpearItem(IItemTier tier, int attackDamage, float attackSpeed, Properties properties) {
 		super(tier, attackDamage, attackSpeed, properties);
@@ -45,6 +45,9 @@ public class SpearItem extends SwordItem {
 			() -> ImmutableMultimap.of(ForgeMod.REACH_DISTANCE.get(), RangeAttributeModifier));
 
 	private static boolean isPlayerHolding() {
+		if (Minecraft.getInstance().getCameraEntity() == null)
+			return false;
+
 		boolean isHolding = false;
 
 		for (ItemStack item : Minecraft.getInstance().getCameraEntity().getHandSlots()) {
@@ -55,7 +58,6 @@ public class SpearItem extends SwordItem {
 		return isHolding;
 	}
 
-	
 //	@SubscribeEvent
 	public static void holdingSpear(LivingUpdateEvent event) {
 		if (!(event.getEntity() instanceof PlayerEntity))
@@ -75,7 +77,7 @@ public class SpearItem extends SwordItem {
 
 	@SubscribeEvent
 	@OnlyIn(Dist.CLIENT)
-	// Edited GameRenderer.pick
+//	Edited GameRenderer.pick
 	public static void dontMissEntitiesWhenYouHaveHighReachDistance(ClickInputEvent event) {
 		Minecraft mc = Minecraft.getInstance();
 		Entity entity = mc.getCameraEntity();
@@ -110,12 +112,13 @@ public class SpearItem extends SwordItem {
 						mc.hitResult = entityraytraceresult;
 						if (entity1 instanceof LivingEntity || entity1 instanceof ItemFrameEntity) {
 							mc.crosshairPickEntity = entity1;
+
+							System.out.println("Entity Detected & Found");
 						}
 					}
-				} else
-					event.setCanceled(true);
+				}
 			}
 		}
 	}
-	
+
 }
